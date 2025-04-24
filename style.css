@@ -1,0 +1,149 @@
+body {
+
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #F9F7F7;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  text-align: left;
+  color: #3F72AF;
+}
+
+.logo {
+  height:200px;
+  position: relative;
+}
+
+.letsmake {
+  color:#DBE2EF;
+}
+
+span.easy {
+  position: relative; /* Torna o `span` o pai do `::before` */
+  display: inline-block; /* Necessário para garantir a posição correta */
+}
+
+span.easy::before {
+  background: #DBE2EF;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0); 
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1; 
+}
+
+span.easy:hover::before {
+  transform: scaleX(1); /* Aplica o efeito ao passar o mouse */
+  transform-origin: left;
+}
+
+.cursor{
+  width: 24em;
+  margin: 0 auto;
+  border-right: 9px solid #ffffff;
+  font-size: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%); 
+  color: #3F72AF;
+  position: absolute;
+  display:inline-block;
+  padding-left: 100px;
+  padding-top: 200px;
+  -webkit-text-stroke: 1px black;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #112D4E;
+}
+
+.typewriter-animation {
+  animation: 
+    typewriter 3s steps(50) 0.5s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 40%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
+
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+}
+
+.card {
+  width: 45%;
+}
+
+.left {
+  margin-top: 50px;
+  float:left;
+}
+
+.right {
+  margin-top: 50px;
+  float: right;
+}
+
+.card-title 
+{
+  color: #ffffff;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 1px 4px #112D4E;
+
+}
+
+@media (max-width: 680px) {
+  .logo {
+    width: 70px;
+    height: 80px
+  }
+  .cursor{
+    width: 24em;
+    margin: 0 auto;
+    border-right: 9px solid #ffffff;
+    font-size: 1.7em;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+    color: #3F72AF;
+    position: absolute;
+    display:inline-block;
+    padding-left: 100px;
+    padding-top: 200px;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 1px 4px #112D4E;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+    width: 100%;
+    display: inline;
+    object-fit: cover;
+  }
+}
